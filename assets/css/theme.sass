@@ -1,0 +1,182 @@
+@import "../../bower_components/barebones/css/style.scss"
+
+@function weights($weight)
+	@return map-get($weights, $weight)
+
+@function fonts($family)
+	@return map-get($fonts, $family)
+
+$colors: ( keyline: (light: #E1F0EF), brand: (primary: #114577, secondary: #00A099))
+$weights: ( light: 300, demi-bold: 600, bold: 700 )
+$fonts: (primary: 'avenir next', secondary: 'adobe caslon pro')
+
+.text-medium
+	font-size: 18px
+
+.link-underlined
+	border-bottom: 1px solid colors(keyline, light)
+	padding-bottom: sizes(half)
+
+
+html
+	background: white
+	font-family: "avenir next"
+	color: colors(brand, primary)
+	
+body
+	padding-top: 0
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+input[type="date"],
+input[type="tel"],
+input[type="search"],
+select,
+textarea,
+.input
+	-webkit-appearance: none // Need to replace this
+	border-radius: 3px
+	border: 1px solid #DFDFDF
+	background: white
+	height: 48px
+	line-height: 48px // Needed for select elements
+	padding-left: sizes(base)
+	font-weight: 400
+	font-size: 16px
+	outline: none
+	text-decoration: none
+	width: 100%
+	&:focus
+		// +placeholder
+		// 	color: colors(greyscale, base)
+
+
+
+
+
+
+.product-quantity
+	width: 300px
+	margin: auto
+	
+	select
+		border: 0
+		border-radius: 0
+		opacity: 0.8
+
+
+.product-heading
+	text-align: center
+	&:before
+		content: ""
+		border-top: 1px solid colors(brand, primary)
+		width: 40px
+		height: 1px
+		display: block
+		margin: 0 auto sizes(base)
+	
+	&:after
+		content: ""
+		border-top: 1px solid colors(brand, primary)
+		width: 40px
+		height: 1px
+		display: block
+		margin: sizes(base) auto sizes(triple)
+
+
+.product-masthead
+	background-image: url("../images/bg.jpg")
+	display: table
+	text-align: center
+	color: white
+	background:
+		repeat: no-repeat
+		position: center
+		size: cover
+	height: 400px
+	width: 100%
+	.product-masthead-content
+		display: table-cell
+		vertical-align: middle
+
+
+
+
+.landing-page-section
+	padding: 100px 0
+
+.masthead
+	background-image: url("../images/masthead.jpg")
+	text-align: center
+	margin-top: -174px
+	height: 100%
+	.masthead-heading, .masthead-subheading
+		color: colors(brand, primary)
+		font:
+			family: fonts(secondary)
+			weight: 100
+	.masthead-heading
+		font-size: 80px
+		margin-bottom: sizes(base)
+	.masthead-subheading
+		font-size: 22px
+		max-width: 600px
+
+
+.top-bar
+	+clearfix
+	width: 100%
+	border-bottom: 1px solid colors(keyline, light)
+	color: colors(brand, secondary)
+	padding-left: sizes(double-half)
+	
+	.top-bar-message
+		float: left
+		font-size: 14px
+		margin-top: 14px
+		
+		
+	.top-bar-links
+		float: right
+		list-style-type: none
+		> li
+			float: left
+			border-left: 1px solid colors(keyline, light)
+
+			
+			> a
+				display: block
+				font:
+					size: 12px
+					weight: weights(demi-bold)
+				
+				text-transform: uppercase
+				
+				padding: 20px
+
+.site-header
+	padding: sizes(double) 0
+	width: 100%
+	text-align: center
+	.site-header-logo
+		display: inline-block
+		width: 130px
+		margin-bottom: sizes(double)
+	
+	.site-header-links
+		> li
+			display: inline-block
+			margin-right: 100px
+			&:last-child
+				margin-right: 0
+			> a
+				font-size: 13px
+				letter-spacing: .2em
+				color: colors(brand, primary)
+				font-weight: weights(demi-bold)
+				text-transform: uppercase
