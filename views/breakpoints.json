@@ -1,0 +1,10 @@
+{ "lastUpdated":"12:57",
+   "filterOut":[
+
+            ],
+    "markers":[
+        {"name" : "blah", "image" : "images/logos/image1.png", "link" : "/link1"},
+        {"name" : "blah 2", "image" : "images/logos/image2.png", "link" : "/link2"},
+        {"name" : "blah 3", "image" : "images/logos/image3.png", "link" : "/link3"}
+
+    ]}

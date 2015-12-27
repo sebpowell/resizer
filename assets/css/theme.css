@@ -1575,6 +1575,17 @@ strong { font-weight: 600; }
 .module-split-panel .module-split-panel-points p { font-size: 16px; }
 @media (min-width: 1080px) { .module-split-panel .module-split-panel-points p { font-size: 14px; } }
 
+.navbar { background: blue; width: 100%; height: 40px; }
+@media (min-width: 900px) { .navbar { height: 200px; background: red; } }
+
+.testing-bar { position: fixed; bottom: 0; left: 0; padding: 20px; width: 100%; background: white; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
+
+.phantom { width: 100%; height: 100%; background: grey; text-align: center; }
+
+.iframe-wrapper { position: fixed; height: 100%; z-index: 9999; width: 100%; background: grey; }
+
+iframe { transition: width, 0.75s; }
+
 .text-medium { font-size: 18px; }
 
 .link-underlined { border-bottom: 1px solid #E1F0EF; padding-bottom: 8px; }

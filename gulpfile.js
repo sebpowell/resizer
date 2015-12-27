@@ -30,8 +30,8 @@ gulp.task('sass', function () {
 	})
 	// .pipe(autoprefixer("last 2 version", "> 1%"))
 	.pipe(gulp.dest(function(file) {
-    return file.base;
-   }));
+		return file.base;
+	 }));
 });
 
 /////////////////////////////////////////////////////
